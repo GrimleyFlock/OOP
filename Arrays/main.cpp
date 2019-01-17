@@ -6,6 +6,7 @@ class student{
 	int score[5];
 	string name;
 	int i, student_1;
+	int search_number;
 	
 	public:
 		void insert(){
@@ -24,6 +25,19 @@ class student{
 				cout<<score[i]<<endl;
 			}
 		}
+		
+		int search(){
+			cout<<"Key in number to be searched: "<<endl;
+			cin>>search_number;
+			for( i = 0; i < 5; i++){
+				if ( score[i] == search_number){
+					cout<<"Number Found!"<<endl;
+					return 0;
+				} 
+				}
+			}
+		
+		}
 	
 };
 
@@ -32,9 +46,12 @@ class student{
 int main() {
 	
 	student student_1;
-	
+		
 	student_1.insert();
 	student_1.display();
+	
+	student_1.search();
+
 	
 	return 0;
 }

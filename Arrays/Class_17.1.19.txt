@@ -1,0 +1,5 @@
+Today's class:
+	>Searching for data
+	>Deleting data
+	>Sort/Arrane data
+	ALL IN THE ARRAY
