@@ -3,41 +3,42 @@ using namespace std;
 
 class student{
 	private:
-	int score[5];
-	string name;
-	int i, student_1;
-	int search_number;
+	int test[100];
 	int s;
 	
 	
 	public:
-		void insert(){
+		void insert(){ 
 			s = 5;
-			cout<<"Enter name: "<<endl;
-			cin>>name;
+			int i;
 			cout<<"Insert the 5 scores:"<<endl;
 			
 			for( i = 0; i < s; i ++){
-				cin>>score[i];
+				cin>>test[i];
 			}
 		}
 		
 		void display(){
-			cout<<"Your name is: "<<name<<" and your scores are: "<<endl;
+			int i;
+			cout<<"The ordered list is as follows: "<<endl;
 			for( i = 0; i < s; i++){
-				cout<<score[i]<<endl;
+				cout<<test[i]<<endl;
 			}
 		}
 		
 		int search(){
+			int search_number, i;
 			cout<<"Key in number to be searched: "<<endl;
 			cin>>search_number;
+			
 			for( i = 0; i < s; i++){
-				if ( score[i] == search_number){
+				if ( test[i] == search_number){
 					cout<<"Number Found!"<<endl;
 					return 0;
 				} 
 				}
+				cout<<"Not Found";
+				return 0;
 			}
 			
 		int num_delete(){
@@ -46,7 +47,7 @@ class student{
 			cin>>delete_number;
 			
 			for ( i = 0; i < s; i++){
-				if (score[i] == delete_number){
+				if (test[i] == delete_number){
 					cout<<"Number Found"<<endl;
 					break;
 				}
@@ -56,28 +57,45 @@ class student{
 				return 0;
 			} else {
 				for ( int j = i; j < 5; j++){
-					score[j] = score[j+1];
+					test[j] = test[j+1];
 				}	
 			}
 			s--;
 				return 0;
 			}
+			
+		void ordered_insert(){
+			s = 5;
+			int x, i ;
+			for ( int a = 0; a < 5; a++)
+			{
+			
+			cout<<"Enter a score to insert: "<<endl;
+			cin>>x;
+			
+			for(i = 0; i < 5; i ++)
+			{
+				
+			if(test[i] > x) //Correct Position
+				break;
+			}
+		for (int j = 5; j > i; j--)
+		{ 
+			test[j] = test[j-1]; //Shift Position
+		}
+		test[i] = x; //Insert
+	}
+}	
 		
-	};
+};
 	
-
-
 
 
 int main() {
 	
 	student student_1;
-		
-	student_1.insert();
+	
+	student_1.ordered_insert();
 	student_1.display();
 	
-	student_1.num_delete();
-	student_1.display();
-	
-	return 0;
 }

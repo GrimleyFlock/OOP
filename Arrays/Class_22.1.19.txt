@@ -1,0 +1,19 @@
+Today's lesson:
+	Ordered insert
+	Binary search
+	Algorithm analysis
+	Sort
+
+Types of arrays:
+	A. Unordered Arrays -> Big challenged = Sequential access/reading
+		Linear search - Accessing values in an array one value at a time
+		      	- It is time consuming
+
+	B. Ordered Arrays
+		Step 1: Ask user for a number
+		Step 2: Find the right position
+		Step 3: Start from the back
+		Step 4: Shift elements one step back
+		Step 5: Stop at right position
+		Step 6: Insert the element
+	
