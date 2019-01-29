@@ -1,0 +1,33 @@
+Binary Search
+
+while(True){
+- Divide array into two
+- Check if middle number is the number
+	Yes, say found & exit.
+- Check if no is bigger than mid
+	not found
+	exit
+Yes, start from the top half, No, start from the lower bound of the array
+
+else { 
+change the uppert part of the array
+}
+}//End of loop
+
+repeat the process
+Include a loop == while(True)
+
+if lower bound and upper bound, mid number not found
+
+11 22 33 44 55 66 77 88 99
+linear search has 7 reads
+binary search has 2 reads
+
+Binary search is the fastest: S = log base 2 R OR N 
+Big O Notation = O(log N) -> Binary search
+
+For linear searches speed is in the order of N -> O(N)
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+Sorting
+ - Arranging data
+Bubble Sort Algorithm

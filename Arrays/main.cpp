@@ -20,7 +20,7 @@ class student{
 		
 		void display(){
 			int i;
-			cout<<"The ordered list is as follows: "<<endl;
+			cout<<"The list is as follows: "<<endl;
 			for( i = 0; i < s; i++){
 				cout<<test[i]<<endl;
 			}
@@ -85,7 +85,55 @@ class student{
 		}
 		test[i] = x; //Insert
 	}
-}	
+}
+ int binarysearch()
+ {
+ 	int low = 0, up = 4, mid, x;
+ 	cout<<"Enter a score to search for: "<<endl;
+ 	cin>>x;
+ 	for (int i = 0; i < 5; i ++)
+ 	{
+ 		mid = ( low + up)/2;
+ 		
+ 		if ( test [mid]== x)
+ 		{
+ 			cout<<"Found! "<<endl;
+ 			return 0;
+		 }
+		 else if ( low > up)
+		 {
+		 	cout<<"Not Found! "<<endl;
+		 	return 0;
+		 }
+		 else if ( x > test[mid])
+		 {
+		 	low = mid + 1;
+		 }
+		 else if (x < test[mid])
+		 {
+		 	up = mid - 1;
+		 }
+	}
+ }
+ 
+ void bubblesort()
+ {
+ 	for ( int j = 5; j > 1; j--)
+ 	{
+	 
+ 	for ( int i = 0; i < 5; i++)
+	 {
+	 	if ( test[i] > test[i + 1])
+		 {
+	 		int temp = test [i + 1];
+	 		test [i + 1] = test[i];
+	 		test[i] = temp;
+		 }
+	 }
+	}
+ 	
+ }
+	
 		
 };
 	
@@ -97,5 +145,10 @@ int main() {
 	
 	student_1.ordered_insert();
 	student_1.display();
+	student_1.bubblesort();
+	student_1.binarysearch();
+	cout<<endl;
+	//student_1.display();
+
 	
 }
