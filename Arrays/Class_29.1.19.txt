@@ -1,0 +1,18 @@
+Insertion Sort
+- Faster way of sorting
+Algorithm:
+
+Case Array ->
+44 33 55 22 11
+
+1.Number in beginning of array and store in temp location
+2. Take 44 where 33 is
+
+33 44 55 22 11
+
+3. Pick number on extreme right store on temp 
+	temp = 22
+Are 55 & 33 is 33 smaller than 55, yes just stay, no if bigger,
+is 22 greater than 55, no, then:
+
+33 44 55 55 11

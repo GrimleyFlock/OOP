@@ -133,6 +133,23 @@ class student{
 	}
  	
  }
+ 
+ void insertionSort()
+ {
+ 	int in, out;
+ 	for( out = 1; out < 5; out++)
+ 	{
+ 		double temp = test[out];
+ 		in = out;
+ 		while ( in > 0 && test[in - 1] >= temp)
+ 		{
+ 			test[in] = test[in - 1];
+ 			--in;
+		 }
+		 test[in] = temp;
+	 }
+ 	
+ }
 	
 		
 };
@@ -143,12 +160,11 @@ int main() {
 	
 	student student_1;
 	
-	student_1.ordered_insert();
-	student_1.display();
-	student_1.bubblesort();
-	student_1.binarysearch();
+	student_1.insert();
+	student_1.insertionSort();
+	//student_1.binarysearch();
 	cout<<endl;
-	//student_1.display();
+	student_1.display();
 
 	
 }
