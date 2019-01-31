@@ -16,3 +16,4 @@ Are 55 & 33 is 33 smaller than 55, yes just stay, no if bigger,
 is 22 greater than 55, no, then:
 
 33 44 55 55 11
+is 44 smaller,

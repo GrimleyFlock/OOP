@@ -118,10 +118,10 @@ class student{
  
  void bubblesort()
  {
- 	for ( int j = 5; j > 1; j--)
+ 	for ( int j = 5; j > 1; j--)//Outer lopp helps repeat the process of going through the array while exchanging
  	{
 	 
- 	for ( int i = 0; i < 5; i++)
+ 	for ( int i = 0; i < 5; i++)//Inner Loop compares and swaps
 	 {
 	 	if ( test[i] > test[i + 1])
 		 {
