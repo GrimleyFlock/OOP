@@ -1,0 +1,7 @@
+Queue - First In First Out
+Applications - Printer job handler
+	     - Buffers in general
+
+Terminologies: insert/enqueue
+	       delete/dequeue
+	       display/peek
