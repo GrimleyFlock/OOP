@@ -15,6 +15,8 @@ class student
 	
 void enqueue(int x)
 {
+	if ( N != 5)
+	{
 	test[rear++] = x;
 	 
 	if (rear > 4 )//Wrap Around
@@ -28,6 +30,10 @@ void enqueue(int x)
 	}
 		
 	N++;
+	} else
+	{
+		cout<<"Queue is full!"<<endl;
+	}
 }
 
 int dequeue()
@@ -54,7 +60,7 @@ int main()
 	student s1;
 	int x;
 		cout<<"Enter value "<<endl;
-	for(int i = 0; i < 5; i++)
+	for(int i = 0; i < 7; i++)
 	{
 		cin>>x;
 		s1.enqueue(x);
