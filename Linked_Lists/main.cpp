@@ -171,7 +171,7 @@ class linkedlist
 			}
 		}
 		
-		void indertDouble(string i, double c)
+		void insertDouble(string i, double c)
 		{
 			link* pnewlink = new link(i, c);
 			if( pfirst==NULL ) //if empty list,
@@ -183,9 +183,20 @@ class linkedlist
 			pfirst->pprevious = pnewlink; //make previous point at new
 			}
 			pnewlink->pnext = pfirst; 
-			pfirst = pnewlink;  
-
-			
+			pfirst = pnewlink;  	
+		}
+		
+		void displayBackwards()
+		{
+			cout << "List (last-->first): ";
+			link* pcurrent = plast; //start at end
+			while(pcurrent != pfirst) 
+			{
+			pcurrent->display(); //display data
+			pcurrent = pcurrent->pprevious; //go to previous link
+			}
+			pcurrent->display(); //display pFirst
+			cout << endl;
 		}
 		
 		
@@ -204,18 +215,23 @@ int main()
 	//x.searchStock();
 	//x.linkDelete();
 	//x.displayList();
-	x.insertlast("Eggs", 56.25);
-	x.insertlast("Bananas", 20.20);
-	x.insertlast("Omo", 41.00);
-	x.insertlast("Ushindi", 25.30);
-	cout<<"QUEUE"<<endl;
-	x.displayList();
+//	x.insertlast("Eggs", 56.25);
+//	x.insertlast("Bananas", 20.20);
+//	x.insertlast("Omo", 41.00);
+//	x.insertlast("Ushindi", 25.30);
+//	cout<<"QUEUE"<<endl;
+//	x.displayList();
 	
-	y.insert("Eggs", 56.25);
-	y.insert("Bananas", 20.20);
-	y.insert("Omo", 41.00);
-	y.insert("Ushindi", 25.30);
-	cout<<"STACK"<<endl;
-	y.displayList();
+//	y.insert("Eggs", 56.25);
+//	y.insert("Bananas", 20.20);
+//	y.insert("Omo", 41.00);
+//	y.insert("Ushindi", 25.30);
+//	cout<<"STACK"<<endl;
+//	y.displayList();
+	
+	x.insertDouble("Eggs", 56.25);
+	x.insertDouble("Bananas", 20.20);
+	x.insertDouble("Omo", 41.00);
+	x.displayBackwards();
 	return 0;
 }
