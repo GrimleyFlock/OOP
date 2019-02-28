@@ -9,11 +9,13 @@ class link
 	
 	public:
 	link* pnext;
+	link* pprevious;
 	link(string i, double c)//Constructor
 	{
 		item = i;
 		cost = c;
 		pnext = NULL;
+		pprevious = NULL;
 	}
 		
 		void display()
@@ -167,6 +169,23 @@ class linkedlist
 				}
 				pcurrent=pcurrent->pnext;
 			}
+		}
+		
+		void indertDouble(string i, double c)
+		{
+			link* pnewlink = new link(i, c);
+			if( pfirst==NULL ) //if empty list,
+			{
+			plast = pnewlink; //make pLast point at new link
+			}
+			else
+			{
+			pfirst->pprevious = pnewlink; //make previous point at new
+			}
+			pnewlink->pnext = pfirst; 
+			pfirst = pnewlink;  
+
+			
 		}
 		
 		
